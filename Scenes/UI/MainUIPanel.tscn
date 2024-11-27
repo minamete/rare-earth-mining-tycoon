@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0w3ldhf4t0tf"]
+[gd_scene load_steps=5 format=3 uid="uid://c0w3ldhf4t0tf"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainUiPanel.cs" id="1_w4a7k"]
 [ext_resource type="PackedScene" uid="uid://c6f7ra731fsgd" path="res://Scenes/UI/MiningSitePanel.tscn" id="2_alejh"]
+[ext_resource type="PackedScene" uid="uid://bat6jabt24bh8" path="res://Scenes/UI/MarketPanel.tscn" id="3_eoso1"]
 
 [sub_resource type="Theme" id="Theme_05s4p"]
 
@@ -100,8 +101,19 @@ size_flags_vertical = 3
 text = "Settings
 "
 
-[node name="MiningSitePanel" parent="Separator/MainPanel" instance=ExtResource("2_alejh")]
+[node name="ImportantPanels" type="CenterContainer" parent="Separator/MainPanel"]
+custom_minimum_size = Vector2(1400, 0)
+layout_mode = 2
+
+[node name="MiningSitePanel" parent="Separator/MainPanel/ImportantPanels" instance=ExtResource("2_alejh")]
+custom_minimum_size = Vector2(1400, 800)
+layout_mode = 2
+
+[node name="MarketPanel" parent="Separator/MainPanel/ImportantPanels" instance=ExtResource("3_eoso1")]
+visible = false
 layout_mode = 2
 
 [connection signal="pressed" from="Separator/MiddlePanel/NewMiningSiteButton" to="." method="OnNewMiningSiteButtonPressed"]
 [connection signal="pressed" from="Separator/MainPanel/MenuVBox/Inventory" to="." method="OnInventoryPressed"]
+[connection signal="pressed" from="Separator/MainPanel/MenuVBox/MiningSite" to="." method="OnMiningSitePressed"]
+[connection signal="pressed" from="Separator/MainPanel/MenuVBox/Market" to="." method="OnMarketPressed"]

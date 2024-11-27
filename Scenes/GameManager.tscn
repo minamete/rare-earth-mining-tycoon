@@ -12,4 +12,8 @@ script = ExtResource("1_85afa")
 wait_time = 24.0
 autostart = true
 
+[node name="MarketTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="DayTimer" to="." method="OnDayTimerTimeout"]
+[connection signal="timeout" from="MarketTimer" to="." method="OnMarketTimerTimeout"]

@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://bat6jabt24bh8"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MarketPanel.cs" id="1_8foti"]
+[ext_resource type="Script" path="res://Scripts/UI/GraphDisplay.cs" id="1_24x8e"]
+
+[node name="MarketPanel" type="MarginContainer"]
+custom_minimum_size = Vector2(1400, 800)
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+script = ExtResource("1_8foti")
+
+[node name="MainLayout" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="MainVBox" type="VBoxContainer" parent="MainLayout"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="MainLayout/MainVBox"]
+layout_mode = 2
+text = "Raw Ores Market"
+
+[node name="MainArea" type="HBoxContainer" parent="MainLayout/MainVBox"]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Graph" type="PanelContainer" parent="MainLayout/MainVBox/MainArea"]
+custom_minimum_size = Vector2(800, 620)
+layout_mode = 2
+
+[node name="GraphDisplay" type="Control" parent="MainLayout/MainVBox/MainArea/Graph"]
+layout_mode = 2
+script = ExtResource("1_24x8e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainLayout/MainVBox/MainArea"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectLabel" type="Label" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+text = "Select raw ore:"
+
+[node name="OptionButton" type="OptionButton" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+allow_reselect = true
+
+[node name="OwnLabel" type="Label" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+text = "Owned: "
+
+[node name="PriceLabel" type="Label" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Price: "
+
+[node name="SellOne" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sell (1x)"
+
+[node name="SellTen" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sell (10x)"
+
+[node name="SellHundred" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sell (100x)"
+
+[node name="BuyOne" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Buy (1x)"
+
+[node name="BuyTen" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Buy (10x)"
+
+[node name="BuyHundred" type="Button" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Buy (100x)"

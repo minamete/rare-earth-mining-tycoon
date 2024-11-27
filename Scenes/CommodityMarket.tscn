@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvd7fmmha2jt5"]
+
+[ext_resource type="Script" path="res://Scripts/CommodityMarket.cs" id="1_d41ul"]
+
+[node name="CommodityMarket" type="Node"]
+script = ExtResource("1_d41ul")

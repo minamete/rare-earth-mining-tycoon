@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public partial class GameManager : Node
 {
 	public static GameManager Instance { get; private set; }
+	public CommodityMarket Market { get; private set; }
+	private PackedScene _marketScene;
 	private Player _player = new Player();
 	private int days = 1;
 	private Godot.Collections.Array<MiningSite> _miningSiteList = new Godot.Collections.Array<MiningSite>();
@@ -12,6 +14,10 @@ public partial class GameManager : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_marketScene = GD.Load<PackedScene>("res://Scenes/CommodityMarket.tscn");
+		Market = _marketScene.Instantiate() as CommodityMarket;
+		AddChild(Market);
+		
 		_player.OnMoneyChanged += OnPlayerChanged;
 		Instance = this;
 		Json JSON = new Json();
@@ -35,7 +41,7 @@ public partial class GameManager : Node
 		
 		var mainUIPanel = GetNode<MainUiPanel>("MainUiPanel");
 		mainUIPanel.UpdateInternalMineSiteList(_miningSiteList);
-		mainUIPanel.UpdatePlayerInfo(_player);
+		mainUIPanel.UpdatePlayerInfo(_player);		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -94,5 +100,14 @@ public partial class GameManager : Node
 		var mainUIPanel = GetNode<MainUiPanel>("MainUiPanel");
 		mainUIPanel.UpdateDay(days);
 		GD.Print("Day passed");
+	}
+	
+	private void OnMarketTimerTimeout() {
+		var timer = GetNode<Timer>("MarketTimer");
+		timer.Start(1);
+		Market.UpdatePrices();
+		
+		var marketPanel = GetNode<MarketPanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MarketPanel");
+		marketPanel.UpdateMarkets(Market);
 	}
 }

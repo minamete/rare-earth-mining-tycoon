@@ -109,7 +109,7 @@ data = [{
 "TradingVolume": [1000.0, 5000.0]
 }, {
 "BasePrice": 50.0,
-"CommonName": "Fool's Gold",
+"CommonName": "Golden Iron Ore",
 "Demand": [10000.0, 50000.0],
 "GemDrop": {},
 "Industries": ["Construction", "Research"],

@@ -19,7 +19,7 @@ public partial class MainUiPanel : CanvasLayer
 		
 		var companyName = GetNode<Label>("Separator/TopPanel/CompanyName");
 		var moneyLabel = GetNode<Label>("Separator/TopPanel/MoneyLabel");
-		var miningPanel = GetNode<MiningSitePanel>("Separator/MainPanel/MiningSitePanel");
+		var miningPanel = GetNode<MiningSitePanel>("Separator/MainPanel/ImportantPanels/MiningSitePanel");
 		_player.OnOwnedSitesChanged += miningPanel.OnMineSiteUpdate;
 		miningPanel.UpdateMineList(player.OwnedSites);
 		
@@ -81,5 +81,21 @@ public partial class MainUiPanel : CanvasLayer
 		mscp.AvailableMoney = _player.Money;
 		mscp.Connect("OnMinePurchased", new Callable(GameManager.Instance, "OnMinePurchased"));
 		AddChild(mscp);
+	}
+	
+	private void OnMiningSitePressed() {
+		var mine = GetNode<MiningSitePanel>("Separator/MainPanel/ImportantPanels/MiningSitePanel");
+		mine.Show();
+		
+		var marketPanel = GetNode<MarketPanel>("Separator/MainPanel/ImportantPanels/MarketPanel");
+		marketPanel.Hide();
+	}
+	
+	private void OnMarketPressed() {
+		var mine = GetNode<MiningSitePanel>("Separator/MainPanel/ImportantPanels/MiningSitePanel");
+		mine.Hide();
+		
+		var marketPanel = GetNode<MarketPanel>("Separator/MainPanel/ImportantPanels/MarketPanel");
+		marketPanel.Show();
 	}
 }
