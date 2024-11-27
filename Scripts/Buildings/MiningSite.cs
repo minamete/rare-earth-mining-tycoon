@@ -58,4 +58,20 @@ public partial class MiningSite : Building
 		GD.Print($"Starting idle production for {resource} at {ratePerHour} per hour.");
 		// Add logic for idle production
 	}
+	
+	public static Color GetColourFromRarity(float rarity) {
+		if (rarity >= 15) {
+			return Colors.White;
+		} else if (rarity >= 5) {
+			return Colors.Green;
+		} else if (rarity >= 1) {
+			return Colors.Orchid;
+		} else {
+			return Colors.Gold;
+		}
+	}
+	
+	public Color GetColourFromDrop(string drop) {
+		return MiningSite.GetColourFromRarity(DropTable[drop]);
+	}
 }

@@ -12,7 +12,6 @@ public partial class Building : Node
 	{
 		Efficiency = 1.0f;
 		Workers = new List<Worker>();
-		DailyCost = 10;
 	}
 
 	public void HireWorker(Worker worker)

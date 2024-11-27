@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Rare Earth Mining Tycoon"
+config/name="Mining Company Simulator"
+config/description="Have you ever wanted to start your own mining company? Do you miss the sweet call of the mines? Do you want to work with children? Here's your chance."
 run/main_scene="res://Scenes/GameManager.tscn"
 config/features=PackedStringArray("4.3", "C#", "Mobile")
 config/icon="res://icon.svg"
@@ -31,3 +32,4 @@ theme/default_theme_scale=2.0
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

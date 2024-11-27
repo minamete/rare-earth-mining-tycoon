@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class ResourceManager : Node
 {
@@ -45,6 +46,21 @@ public partial class ResourceManager : Node
 			return false;
 
 		_resources[resource] -= amount;
+		return true;
+	}
+	
+	public List<string> GetNonzeroResources() {
+		List<string> rss = new List<string>();
+		foreach (var item in _resources.Keys) {
+			if (_resources[item] > 0) rss.Add(item);
+		}
+		return rss;
+	}
+	
+	public bool HasNothing() {
+		foreach (var item in _resources.Keys) {
+			if (_resources[item] > 0) return false;
+		}
 		return true;
 	}
 

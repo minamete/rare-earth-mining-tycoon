@@ -19,6 +19,7 @@ public partial class GameManager : Node
 		AddChild(Market);
 		
 		_player.OnMoneyChanged += OnPlayerChanged;
+		_player.OnInventoryChanged += OnInventoryChanged;
 		Instance = this;
 		Json JSON = new Json();
 		
@@ -41,7 +42,7 @@ public partial class GameManager : Node
 		
 		var mainUIPanel = GetNode<MainUiPanel>("MainUiPanel");
 		mainUIPanel.UpdateInternalMineSiteList(_miningSiteList);
-		mainUIPanel.UpdatePlayerInfo(_player);		
+		OnPlayerChanged(0);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,6 +60,9 @@ public partial class GameManager : Node
 	private void OnPlayerChanged(int val) {
 		var mainUIPanel = GetNode<MainUiPanel>("MainUiPanel");
 		mainUIPanel.UpdatePlayerInfo(_player);
+		
+		var marketPanel = GetNode<MarketPanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MarketPanel");
+		marketPanel.UpdatePlayer(_player);
 	}
 	
 	private void CreateMiningSite(Godot.Collections.Dictionary siteData)
@@ -87,7 +91,8 @@ public partial class GameManager : Node
 	
 	public (string, float) MineOnce(MiningSite site) {
 		(string item, float chance) = site.Excavate();
-		_player.Resources.AddResource(item, 1);
+		_player.AddResource(item, 1);
+		_player.Money -= 10;
 		return (item, chance);
 	}
 	
@@ -109,5 +114,10 @@ public partial class GameManager : Node
 		
 		var marketPanel = GetNode<MarketPanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MarketPanel");
 		marketPanel.UpdateMarkets(Market);
+	}
+	
+	private void OnInventoryChanged(ResourceManager rss) {
+		var marketPanel = GetNode<MarketPanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MarketPanel");
+		marketPanel.UpdatePlayer(_player);
 	}
 }

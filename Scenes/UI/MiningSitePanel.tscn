@@ -64,18 +64,21 @@ layout_mode = 2
 
 [node name="Extract" type="Button" parent="MainLayoutMargin/MainLayout/MineDetails/MineControls"]
 layout_mode = 2
-text = "Mine Once"
+size_flags_vertical = 3
+text = "Mine Once ($10)"
 
 [node name="MineTimer" type="Timer" parent="MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract"]
 one_shot = true
 
 [node name="Production" type="Button" parent="MainLayoutMargin/MainLayout/MineDetails/MineControls"]
 layout_mode = 2
+disabled = true
 text = "Production
 "
 
 [node name="Workers" type="Button" parent="MainLayoutMargin/MainLayout/MineDetails/MineControls"]
 layout_mode = 2
+disabled = true
 text = "Upgrades
 "
 

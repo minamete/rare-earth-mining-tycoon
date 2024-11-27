@@ -46,7 +46,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Select raw ore:"
 
-[node name="OptionButton" type="OptionButton" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
+[node name="SelectComm" type="OptionButton" parent="MainLayout/MainVBox/MainArea/VBoxContainer"]
 layout_mode = 2
 allow_reselect = true
 
@@ -88,3 +88,30 @@ text = "Buy (10x)"
 layout_mode = 2
 size_flags_vertical = 3
 text = "Buy (100x)"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.314316, 0.314316, 0.314316, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -274.5
+offset_top = -22.5
+offset_right = 274.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Please extract some resources first!"
+
+[connection signal="item_selected" from="MainLayout/MainVBox/MainArea/VBoxContainer/SelectComm" to="." method="OnSelectCommItem"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/SellOne" to="." method="OnSellOnePressed"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/SellTen" to="." method="OnSellTenPressed"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/SellHundred" to="." method="OnSellHundredPressed"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/BuyOne" to="." method="OnBuyOnePressed"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/BuyTen" to="." method="OnBuyTenPressed"]
+[connection signal="pressed" from="MainLayout/MainVBox/MainArea/VBoxContainer/BuyHundred" to="." method="OnBuyHundredPressed"]

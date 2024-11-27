@@ -118,4 +118,8 @@ public partial class CommodityMarket : Node
 	public Commodity GetCommodity(int indx) {
 		return commodities[indx];
 	}
+	
+	public int GetCommodityFromName(string name) {
+		return commodities.FindIndex((Commodity c) => c.Name == name);
 	}
+}

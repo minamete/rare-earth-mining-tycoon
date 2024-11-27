@@ -27,6 +27,7 @@ public partial class MiningSitePanel : Container
 		_mineSiteList = msl;
 		GD.Print("Updating");
 		var mineListOptions = GetNode<OptionButton>("MainLayoutMargin/MainLayout/MineDetails/MineControls/SelectMine");
+		mineListOptions.Clear();
 		
 		foreach (var mine in msl) {
 			mineListOptions.AddItem(mine.BuildingName);
@@ -39,7 +40,7 @@ public partial class MiningSitePanel : Container
 	
 	public void OnExtractPressed() {
 		var button = GetNode<Button>("MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract");
-		button.Disabled = true;
+		//button.Disabled = true;
 		var timer = GetNode<Timer>("MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract/MineTimer");
 		timer.Start();
 		
@@ -48,17 +49,7 @@ public partial class MiningSitePanel : Container
 	}
 	
 	public void ShowMinedObject(string text, float rarity) {
-		Color color;
-		if (rarity >= 15) {
-			color = Colors.White;
-		} else if (rarity >= 5) {
-			color = Colors.Green;
-		} else if (rarity >= 1) {
-			color = Colors.Orchid;
-		} else {
-			color = Colors.Gold;
-		}
-		
+		Color color = MiningSite.GetColourFromRarity(rarity);		
 		var button = GetNode<Button>("MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract");
 		var popup = popUpScene.Instantiate() as PopUpText;
 		button.AddChild(popup);
@@ -87,6 +78,6 @@ public partial class MiningSitePanel : Container
 	
 	private void OnMineTimerTimeout() {
 		var button = GetNode<Button>("MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract");
-		button.Disabled = false;
+		//button.Disabled = false;
 	}
 }

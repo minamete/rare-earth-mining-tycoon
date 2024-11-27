@@ -6,6 +6,7 @@ public partial class Player : Node
 {
 	[Signal] public delegate void OnMoneyChangedEventHandler(int newValue);
 	[Signal] public delegate void OnOwnedSitesChangedEventHandler(MiningSite site);
+	[Signal] public delegate void OnInventoryChangedEventHandler(ResourceManager rss);
 	[Export] public string CompanyName { get; set; }
 	private float _money;
 	[Export] public float Money { 
@@ -37,11 +38,31 @@ public partial class Player : Node
 	{
 	}
 	
+	public void AddResource(string resource, float amount)
+	{
+		Resources.AddResource(resource, amount);
+		EmitSignal(SignalName.OnInventoryChanged, resource);
+	}
+	
 	public void DailyDecrementResources()
 	{
 		foreach (var mine in OwnedSites) {
 			Money -= mine.DailyCost;
 		}
+	}
+	
+	public void SellResource(string resource, float amount, float cost)
+	{
+		Money += cost;
+		Resources.SpendResource(resource, amount);
+		EmitSignal(SignalName.OnInventoryChanged, resource);
+	}
+	
+	public void BuyResource(string resource, float amount, float cost)
+	{
+		Money -= cost;
+		Resources.AddResource(resource, amount);
+		EmitSignal(SignalName.OnInventoryChanged, resource);
 	}
 	
 	public void BuyMine(MiningSite mine) {
