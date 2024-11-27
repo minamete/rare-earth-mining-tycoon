@@ -104,3 +104,4 @@ text = "Settings
 layout_mode = 2
 
 [connection signal="pressed" from="Separator/MiddlePanel/NewMiningSiteButton" to="." method="OnNewMiningSiteButtonPressed"]
+[connection signal="pressed" from="Separator/MainPanel/MenuVBox/Inventory" to="." method="OnInventoryPressed"]

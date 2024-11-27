@@ -2,11 +2,15 @@
 
 [resource]
 data = [{
+"BasePrice": 100.0,
 "CommonName": "Phosphorus Crystal",
+"Demand": [10000.0, 100000.0],
 "GemDrop": {
 "Apatite Gem": 100.0
 },
 "Industries": ["Fertilizers", "Research"],
+"InterdayVol": [1.0, 3.0],
+"IntradayVol": [2.0, 5.0],
 "LabDrop": {
 "Hydrofluoric Acid": 5.0,
 "Phosphate": 95.0
@@ -14,24 +18,34 @@ data = [{
 "Name": "Apatite",
 "SmeltDrop": {
 "Phosphate": 100.0
-}
+},
+"TradingVolume": [1000.0, 5000.0]
 }, {
+"BasePrice": 140.0,
 "CommonName": "Iridescent Copper Ore",
+"Demand": [5000.0, 50000.0],
 "GemDrop": {
 "Peacock Ore": 100.0
 },
 "Industries": ["Research"],
+"InterdayVol": [2.0, 4.0],
+"IntradayVol": [3.0, 6.0],
 "LabDrop": {
 "Sulfuric Acid": 100.0
 },
 "Name": "Bornite",
 "SmeltDrop": {
 "Copper": 100.0
-}
+},
+"TradingVolume": [500.0, 2000.0]
 }, {
+"BasePrice": 225.0,
 "CommonName": "Golden Copper Ore",
+"Demand": [20000.0, 100000.0],
 "GemDrop": {},
 "Industries": ["Research", "Semiconductors"],
+"InterdayVol": [2.0, 5.0],
+"IntradayVol": [3.0, 6.0],
 "LabDrop": {
 "Ruthenium": 0.05,
 "Sulfuric Acid": 99.95
@@ -40,9 +54,12 @@ data = [{
 "SmeltDrop": {
 "Copper": 80.0,
 "Nickel": 20.0
-}
+},
+"TradingVolume": [1000.0, 3000.0]
 }, {
+"BasePrice": 300.0,
 "CommonName": "Garnet",
+"Demand": [5000.0, 30000.0],
 "GemDrop": {
 "Brown Gem": 20.0,
 "Green Gem": 20.0,
@@ -51,24 +68,36 @@ data = [{
 "Red Gem": 20.0
 },
 "Industries": ["Abrasives", "Woodworking", "Agriculture", "Government", "Research"],
+"InterdayVol": [1.0, 2.0],
+"IntradayVol": [2.0, 4.0],
 "LabDrop": {},
 "Name": "Garnet",
-"SmeltDrop": {}
+"SmeltDrop": {},
+"TradingVolume": [200.0, 1000.0]
 }, {
+"BasePrice": 110.0,
 "CommonName": "Black Iron Crystal",
+"Demand": [50000.0, 200000.0],
 "GemDrop": {
 "Hematite Gem": 100.0
 },
 "Industries": ["Pigments", "Biomedicine", "Research", "Government"],
+"InterdayVol": [1.0, 2.0],
+"IntradayVol": [1.0, 3.0],
 "LabDrop": {},
 "Name": "Hematite",
 "SmeltDrop": {
 "Iron": 100.0
-}
+},
+"TradingVolume": [2000.0, 10000.0]
 }, {
+"BasePrice": 400.0,
 "CommonName": "Titanium Ore",
+"Demand": [10000.0, 100000.0],
 "GemDrop": {},
 "Industries": ["Pigments", "Abrasives", "Research"],
+"InterdayVol": [1.0, 3.0],
+"IntradayVol": [2.0, 5.0],
 "LabDrop": {
 "Iron": 40.0,
 "Titanium": 60.0
@@ -76,11 +105,16 @@ data = [{
 "Name": "Ilmenite",
 "SmeltDrop": {
 "Iron": 100.0
-}
+},
+"TradingVolume": [1000.0, 5000.0]
 }, {
+"BasePrice": 50.0,
 "CommonName": "Fool's Gold",
+"Demand": [10000.0, 50000.0],
 "GemDrop": {},
 "Industries": ["Construction", "Research"],
+"InterdayVol": [2.0, 4.0],
+"IntradayVol": [3.0, 7.0],
 "LabDrop": {
 "Sulfuric Acid": 100.0
 },
@@ -89,11 +123,16 @@ data = [{
 "Gold": 0.5,
 "Iron": 95.0,
 "Nickel": 4.5
-}
+},
+"TradingVolume": [1000.0, 4000.0]
 }, {
+"BasePrice": 70.0,
 "CommonName": "Iron Ore",
+"Demand": [5000.0, 30000.0],
 "GemDrop": {},
 "Industries": ["Construction", "Research"],
+"InterdayVol": [1.0, 3.0],
+"IntradayVol": [2.0, 5.0],
 "LabDrop": {
 "Sulfuric Acid": 100.0
 },
@@ -101,18 +140,26 @@ data = [{
 "SmeltDrop": {
 "Iron": 95.0,
 "Nickel": 5.0
-}
+},
+"TradingVolume": [500.0, 2000.0]
 }, {
+"BasePrice": 225.0,
 "CommonName": "Brown Iron Crystal",
+"Demand": [1000.0, 5000.0],
 "GemDrop": {
 "Staurolite Gem": 100.0
 },
 "Industries": ["Abrasives", "Research"],
+"InterdayVol": [1.0, 2.0],
+"IntradayVol": [2.0, 4.0],
 "LabDrop": {},
 "Name": "Staurolite",
-"SmeltDrop": {}
+"SmeltDrop": {},
+"TradingVolume": [100.0, 500.0]
 }, {
+"BasePrice": 375.0,
 "CommonName": "Tourmaline",
+"Demand": [2000.0, 10000.0],
 "GemDrop": {
 "Black Gem": 14.0,
 "Blue Gem": 14.0,
@@ -123,13 +170,20 @@ data = [{
 "Yellow Gem": 14.0
 },
 "Industries": ["Research"],
+"InterdayVol": [1.0, 2.0],
+"IntradayVol": [1.0, 3.0],
 "LabDrop": {},
 "Name": "Tourmaline",
-"SmeltDrop": {}
+"SmeltDrop": {},
+"TradingVolume": [100.0, 1000.0]
 }, {
+"BasePrice": 175.0,
 "CommonName": "Nickel Ore",
+"Demand": [10000.0, 50000.0],
 "GemDrop": {},
 "Industries": ["Research"],
+"InterdayVol": [1.0, 3.0],
+"IntradayVol": [2.0, 5.0],
 "LabDrop": {
 "Palladium": 0.05,
 "Rhodium": 0.05,
@@ -141,11 +195,16 @@ data = [{
 "Cobalt": 5.0,
 "Iron": 45.0,
 "Nickel": 50.0
-}
+},
+"TradingVolume": [500.0, 2000.0]
 }, {
+"BasePrice": 185.0,
 "CommonName": "Magnetic Copper-Iron Ore",
+"Demand": [5000.0, 20000.0],
 "GemDrop": {},
 "Industries": ["Research"],
+"InterdayVol": [2.0, 4.0],
+"IntradayVol": [3.0, 6.0],
 "LabDrop": {
 "Palladium": 0.05,
 "Rhodium": 0.05,
@@ -157,11 +216,16 @@ data = [{
 "Cobalt": 5.0,
 "Copper": 40.0,
 "Iron": 55.0
-}
+},
+"TradingVolume": [200.0, 1000.0]
 }, {
+"BasePrice": 100.0,
 "CommonName": "Lead Ore",
+"Demand": [10000.0, 100000.0],
 "GemDrop": {},
 "Industries": ["Pigments", "Semiconductors", "Electronics", "Research"],
+"InterdayVol": [1.0, 3.0],
+"IntradayVol": [2.0, 5.0],
 "LabDrop": {
 "Sulfuric Acid": 100.0
 },
@@ -169,36 +233,52 @@ data = [{
 "SmeltDrop": {
 "Lead": 99.5,
 "Silver": 0.5
-}
+},
+"TradingVolume": [1000.0, 5000.0]
 }, {
+"BasePrice": 105.0,
 "CommonName": "Black Iron Ore",
+"Demand": [10000.0, 100000.0],
 "GemDrop": {},
 "Industries": ["Fertilizers", "Mining", "Electronics", "Government", "Biomedicine", "Research"],
+"InterdayVol": [1.0, 2.0],
+"IntradayVol": [1.0, 4.0],
 "LabDrop": {},
 "Name": "Magnetite",
 "SmeltDrop": {
 "Iron": 99.5,
 "Silver": 0.5
-}
+},
+"TradingVolume": [1000.0, 5000.0]
 }, {
+"BasePrice": 800.0,
 "CommonName": "Platinum Ore",
+"Demand": [1000.0, 10000.0],
 "GemDrop": {
 "Sperrylite Gem": 100.0
 },
 "Industries": ["Research"],
+"InterdayVol": [2.0, 4.0],
+"IntradayVol": [3.0, 6.0],
 "LabDrop": {},
 "Name": "Sperrylite",
 "SmeltDrop": {
 "Platinum": 100.0
-}
+},
+"TradingVolume": [1000.0, 5000.0]
 }, {
+"BasePrice": 2000.0,
 "CommonName": "Osmium-Iridium Ore",
+"Demand": [500.0, 5000.0],
 "GemDrop": {},
 "Industries": ["Pens", "Biomedicine", "Research"],
+"InterdayVol": [3.0, 5.0],
+"IntradayVol": [4.0, 8.0],
 "LabDrop": {},
 "Name": "Osmiridium",
 "SmeltDrop": {
 "Iridium": 50.0,
 "Osmium": 50.0
-}
+},
+"TradingVolume": [100.0, 500.0]
 }]

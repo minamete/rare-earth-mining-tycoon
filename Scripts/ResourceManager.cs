@@ -53,10 +53,7 @@ public partial class ResourceManager : Node
 		return _resources.ContainsKey(resource) ? _resources[resource] : 0;
 	}
 	
-	public void PrintResourceTable() {
-		GD.Print("Resource Table");
-		foreach( var item in _resources.Keys) {
-			GD.Print(item.ToString());
-		}
+	public Dictionary<string, float> ShowResources() {
+		return _resources;
 	}
 }

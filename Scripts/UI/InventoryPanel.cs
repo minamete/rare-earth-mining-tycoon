@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class InventoryPanel : Window
 {
@@ -13,7 +14,21 @@ public partial class InventoryPanel : Window
 	{
 	}
 	
-	public void UpdateInventory() {
+	public void UpdateInventory(Dictionary<string, float> inventory) {
+		var id = GetNode<GridContainer>("MarginContainer/VBoxContainer/ScrollContainer/InventoryDisplay");
+		var idChildren = id.GetChildren();
+		foreach (var child in idChildren) {
+			child.QueueFree();
+		}
 		
+		foreach (var key in inventory.Keys) {
+			if (inventory[key] == 0) continue;
+			var keyLabel = new Label();
+			keyLabel.Text = key;
+			var valLabel = new Label();
+			valLabel.Text = inventory[key].ToString();
+			id.AddChild(keyLabel);
+			id.AddChild(valLabel);
+		}
 	}
 }

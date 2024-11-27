@@ -6,6 +6,7 @@ public partial class MainUiPanel : CanvasLayer
 {
 	private Godot.Collections.Array<MiningSite> _availableMines;
 	private PackedScene _miningSiteChooserPanel;
+	private PackedScene _inventoryPanel;
 	private Player _player;
 	
 	public void UpdateDay(int day) {
@@ -24,6 +25,11 @@ public partial class MainUiPanel : CanvasLayer
 		
 		companyName.Text = _player.CompanyName;
 		moneyLabel.Text = "Money: $" + _player.Money.ToString();
+		
+		if (HasNode("inv")) {
+			var inv = GetNode<InventoryPanel>("inv");
+			inv.UpdateInventory(_player.Resources.ShowResources());
+		}
 	}
 
 	
@@ -39,12 +45,23 @@ public partial class MainUiPanel : CanvasLayer
 	public override void _Ready()
 	{
 		_miningSiteChooserPanel = GD.Load<PackedScene>("res://Scenes/UI/MiningSiteChooserPanel.tscn");
-
+		_inventoryPanel = GD.Load<PackedScene>("res://Scenes/UI/InventoryPanel.tscn");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+	
+	public void OnInventoryPressed() {
+		if (HasNode("inv")) {
+			return;
+		}
+		InventoryPanel inv = _inventoryPanel.Instantiate() as InventoryPanel;
+		inv.SetName("inv");
+		inv.CloseRequested += () => inv.QueueFree();
+		inv.UpdateInventory(_player.Resources.ShowResources());
+		AddChild(inv);
 	}
 	
 	public void OnNewMiningSiteButtonPressed() {
