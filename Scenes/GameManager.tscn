@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmu7mo0ex5rdv"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_85afa"]
+[ext_resource type="PackedScene" uid="uid://c0w3ldhf4t0tf" path="res://Scenes/UI/MainUIPanel.tscn" id="2_myvp5"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_85afa")
+
+[node name="MainUiPanel" parent="." instance=ExtResource("2_myvp5")]
+
+[node name="DayTimer" type="Timer" parent="."]
+wait_time = 24.0
+autostart = true
+
+[connection signal="timeout" from="DayTimer" to="." method="OnDayTimerTimeout"]

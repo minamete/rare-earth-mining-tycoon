@@ -1,0 +1,46 @@
+[gd_resource type="JSON" format=3 uid="uid://vjvqsn74gx2u"]
+
+[resource]
+data = {
+"MiningSites": [{
+"BaseProductionRate": 10.0,
+"Cost": 100000.0,
+"Description": "This quaint mine is located in a region of the United States with a history of mining dating back to the industrial revolution. Appalachian Apex is a perfect place for any aspiring mining company to start their operations.",
+"DropTable": {
+"Apatite": 0.1,
+"Bornite": 0.5,
+"Chalcopyrite": 1.0,
+"Garnet": 2.0,
+"Hematite": 35.0,
+"Ilmenite": 11.4,
+"Pyrite": 45.0,
+"Pyrrhotite": 0.5,
+"Staurolite": 3.0,
+"Tourmaline": 1.5
+},
+"ImagePath": "res://Resources/Assets/AppalachianApex.jpg",
+"Location": "United States",
+"Name": "Appalachian Apex",
+"Title": "The Heart of Industry"
+}, {
+"BaseProductionRate": 10.0,
+"Cost": 250000.0,
+"Description": "This mine - situated in the heart of Sudbury, the mining capital of Canada - was abandoned decades ago due to the difficulty of working its loose, unstable ground. Now, it’s ripe for redevelopment.",
+"DropTable": {
+"Chalcopyrite": 15.0,
+"Cubanite": 3.0,
+"Galena": 4.5,
+"Ilmenite": 11.4,
+"Magnetite": 3.0,
+"Osmiridium": 0.1,
+"Pentlandite": 22.0,
+"Pyrite": 20.0,
+"Pyrrhotite": 20.0,
+"Sperrylite": 1.0
+},
+"ImagePath": "res://Resources/Assets/SudburyShovels.jpg",
+"Location": "Canada",
+"Name": "Sudbury Shovels",
+"Title": "Where the Rivers Run Silver"
+}]
+}

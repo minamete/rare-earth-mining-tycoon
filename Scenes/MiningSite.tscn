@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2btot283gcm0"]
+
+[ext_resource type="Script" path="res://Scripts/Buildings/MiningSite.cs" id="1_1s1l1"]
+
+[node name="MiningSite" type="Node"]
+script = ExtResource("1_1s1l1")

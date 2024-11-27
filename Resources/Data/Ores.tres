@@ -1,0 +1,204 @@
+[gd_resource type="JSON" format=3 uid="uid://bmqbbakqh7mkl"]
+
+[resource]
+data = [{
+"CommonName": "Phosphorus Crystal",
+"GemDrop": {
+"Apatite Gem": 100.0
+},
+"Industries": ["Fertilizers", "Research"],
+"LabDrop": {
+"Hydrofluoric Acid": 5.0,
+"Phosphate": 95.0
+},
+"Name": "Apatite",
+"SmeltDrop": {
+"Phosphate": 100.0
+}
+}, {
+"CommonName": "Iridescent Copper Ore",
+"GemDrop": {
+"Peacock Ore": 100.0
+},
+"Industries": ["Research"],
+"LabDrop": {
+"Sulfuric Acid": 100.0
+},
+"Name": "Bornite",
+"SmeltDrop": {
+"Copper": 100.0
+}
+}, {
+"CommonName": "Golden Copper Ore",
+"GemDrop": {},
+"Industries": ["Research", "Semiconductors"],
+"LabDrop": {
+"Ruthenium": 0.05,
+"Sulfuric Acid": 99.95
+},
+"Name": "Chalcopyrite",
+"SmeltDrop": {
+"Copper": 80.0,
+"Nickel": 20.0
+}
+}, {
+"CommonName": "Garnet",
+"GemDrop": {
+"Brown Gem": 20.0,
+"Green Gem": 20.0,
+"Orange Gem": 20.0,
+"Purple Gem": 20.0,
+"Red Gem": 20.0
+},
+"Industries": ["Abrasives", "Woodworking", "Agriculture", "Government", "Research"],
+"LabDrop": {},
+"Name": "Garnet",
+"SmeltDrop": {}
+}, {
+"CommonName": "Black Iron Crystal",
+"GemDrop": {
+"Hematite Gem": 100.0
+},
+"Industries": ["Pigments", "Biomedicine", "Research", "Government"],
+"LabDrop": {},
+"Name": "Hematite",
+"SmeltDrop": {
+"Iron": 100.0
+}
+}, {
+"CommonName": "Titanium Ore",
+"GemDrop": {},
+"Industries": ["Pigments", "Abrasives", "Research"],
+"LabDrop": {
+"Iron": 40.0,
+"Titanium": 60.0
+},
+"Name": "Ilmenite",
+"SmeltDrop": {
+"Iron": 100.0
+}
+}, {
+"CommonName": "Fool's Gold",
+"GemDrop": {},
+"Industries": ["Construction", "Research"],
+"LabDrop": {
+"Sulfuric Acid": 100.0
+},
+"Name": "Pyrite",
+"SmeltDrop": {
+"Gold": 0.5,
+"Iron": 95.0,
+"Nickel": 4.5
+}
+}, {
+"CommonName": "Iron Ore",
+"GemDrop": {},
+"Industries": ["Construction", "Research"],
+"LabDrop": {
+"Sulfuric Acid": 100.0
+},
+"Name": "Pyrrhotite",
+"SmeltDrop": {
+"Iron": 95.0,
+"Nickel": 5.0
+}
+}, {
+"CommonName": "Brown Iron Crystal",
+"GemDrop": {
+"Staurolite Gem": 100.0
+},
+"Industries": ["Abrasives", "Research"],
+"LabDrop": {},
+"Name": "Staurolite",
+"SmeltDrop": {}
+}, {
+"CommonName": "Tourmaline",
+"GemDrop": {
+"Black Gem": 14.0,
+"Blue Gem": 14.0,
+"Green Gem": 14.0,
+"Pink Gem": 14.0,
+"Purple Gem": 14.0,
+"Red Gem": 16.0,
+"Yellow Gem": 14.0
+},
+"Industries": ["Research"],
+"LabDrop": {},
+"Name": "Tourmaline",
+"SmeltDrop": {}
+}, {
+"CommonName": "Nickel Ore",
+"GemDrop": {},
+"Industries": ["Research"],
+"LabDrop": {
+"Palladium": 0.05,
+"Rhodium": 0.05,
+"Ruthenium": 0.05,
+"Sulfuric Acid": 99.85
+},
+"Name": "Pentlandite",
+"SmeltDrop": {
+"Cobalt": 5.0,
+"Iron": 45.0,
+"Nickel": 50.0
+}
+}, {
+"CommonName": "Magnetic Copper-Iron Ore",
+"GemDrop": {},
+"Industries": ["Research"],
+"LabDrop": {
+"Palladium": 0.05,
+"Rhodium": 0.05,
+"Ruthenium": 0.05,
+"Sulfuric Acid": 99.85
+},
+"Name": "Cubanite",
+"SmeltDrop": {
+"Cobalt": 5.0,
+"Copper": 40.0,
+"Iron": 55.0
+}
+}, {
+"CommonName": "Lead Ore",
+"GemDrop": {},
+"Industries": ["Pigments", "Semiconductors", "Electronics", "Research"],
+"LabDrop": {
+"Sulfuric Acid": 100.0
+},
+"Name": "Galena",
+"SmeltDrop": {
+"Lead": 99.5,
+"Silver": 0.5
+}
+}, {
+"CommonName": "Black Iron Ore",
+"GemDrop": {},
+"Industries": ["Fertilizers", "Mining", "Electronics", "Government", "Biomedicine", "Research"],
+"LabDrop": {},
+"Name": "Magnetite",
+"SmeltDrop": {
+"Iron": 99.5,
+"Silver": 0.5
+}
+}, {
+"CommonName": "Platinum Ore",
+"GemDrop": {
+"Sperrylite Gem": 100.0
+},
+"Industries": ["Research"],
+"LabDrop": {},
+"Name": "Sperrylite",
+"SmeltDrop": {
+"Platinum": 100.0
+}
+}, {
+"CommonName": "Osmium-Iridium Ore",
+"GemDrop": {},
+"Industries": ["Pens", "Biomedicine", "Research"],
+"LabDrop": {},
+"Name": "Osmiridium",
+"SmeltDrop": {
+"Iridium": 50.0,
+"Osmium": 50.0
+}
+}]

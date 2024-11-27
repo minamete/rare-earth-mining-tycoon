@@ -1,0 +1,136 @@
+[gd_resource type="JSON" format=3 uid="uid://cj15woaakgwcs"]
+
+[resource]
+data = [{
+"Name": "Apatite",
+"Type": "Ore"
+}, {
+"Name": "Phosphate",
+"Type": "RefinedProduct"
+}, {
+"Name": "Hydrofluoric Acid",
+"Type": "RefinedProduct"
+}, {
+"Name": "Apatite Gem",
+"Type": "Gem"
+}, {
+"Name": "Bornite",
+"Type": "Ore"
+}, {
+"Name": "Copper",
+"Type": "RefinedProduct"
+}, {
+"Name": "Peacock Ore",
+"Type": "Gem"
+}, {
+"Name": "Chalcopyrite",
+"Type": "Ore"
+}, {
+"Name": "Garnet",
+"Type": "Ore"
+}, {
+"Name": "Red Gem",
+"Type": "Gem"
+}, {
+"Name": "Purple Gem",
+"Type": "Gem"
+}, {
+"Name": "Orange Gem",
+"Type": "Gem"
+}, {
+"Name": "Blue Gem",
+"Type": "Gem"
+}, {
+"Name": "Black Gem",
+"Type": "Gem"
+}, {
+"Name": "Pink Gem",
+"Type": "Gem"
+}, {
+"Name": "Yellow Gem",
+"Type": "Gem"
+}, {
+"Name": "Green Gem",
+"Type": "Gem"
+}, {
+"Name": "Brown Gem",
+"Type": "Gem"
+}, {
+"Name": "Hematite",
+"Type": "Ore"
+}, {
+"Name": "Iron",
+"Type": "RefinedProduct"
+}, {
+"Name": "Hematite Gem",
+"Type": "Gem"
+}, {
+"Name": "Ilmenite",
+"Type": "Ore"
+}, {
+"Name": "Titanium",
+"Type": "RefinedProduct"
+}, {
+"Name": "Pyrite",
+"Type": "Ore"
+}, {
+"Name": "Gold",
+"Type": "RefinedProduct"
+}, {
+"Name": "Sulfuric Acid",
+"Type": "RefinedProduct"
+}, {
+"Name": "Pyrrhotite",
+"Type": "Ore"
+}, {
+"Name": "Staurolite",
+"Type": "Ore"
+}, {
+"Name": "Staurolite Gem",
+"Type": "Gem"
+}, {
+"Name": "Tourmaline",
+"Type": "Gem"
+}, {
+"Name": "Ruthenium",
+"Type": "RefinedProduct"
+}, {
+"Name": "Nickel",
+"Type": "RefinedProduct"
+}, {
+"Name": "Pentlandite",
+"Type": "Ore"
+}, {
+"Name": "Rhodium",
+"Type": "RefinedProduct"
+}, {
+"Name": "Palladium",
+"Type": "RefinedProduct"
+}, {
+"Name": "Cobalt",
+"Type": "RefinedProduct"
+}, {
+"Name": "Cubanite",
+"Type": "Ore"
+}, {
+"Name": "Galena",
+"Type": "Ore"
+}, {
+"Name": "Magnetite",
+"Type": "Ore"
+}, {
+"Name": "Sperrylite",
+"Type": "Ore"
+}, {
+"Name": "Platinum",
+"Type": "RefinedProduct"
+}, {
+"Name": "Osmiridium",
+"Type": "Ore"
+}, {
+"Name": "Osmium",
+"Type": "RefinedProduct"
+}, {
+"Name": "Iridium",
+"Type": "RefinedProduct"
+}]

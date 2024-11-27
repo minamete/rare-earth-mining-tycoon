@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwpf7hy8jsjbu"]
+
+[ext_resource type="Script" path="res://Scripts/Animations/PopUpText.cs" id="1_2kgov"]
+
+[sub_resource type="Animation" id="Animation_fu2kp"]
+resource_name = "label_popup_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopUpText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PopUpText:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgfo5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PopUpText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PopUpText:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m2esf"]
+_data = {
+"RESET": SubResource("Animation_dgfo5"),
+"label_popup_animation": SubResource("Animation_fu2kp")
+}
+
+[node name="PopUpText" type="Node"]
+script = ExtResource("1_2kgov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m2esf")
+}
+speed_scale = 2.5
+
+[node name="PopUpText" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 45.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="OnAnimationFinished"]

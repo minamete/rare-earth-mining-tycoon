@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3of7h56857vo"]
+
+[ext_resource type="Script" path="res://Scripts/ResourceManager.cs" id="1_typsi"]
+
+[node name="ResourceManager" type="Node"]
+script = ExtResource("1_typsi")

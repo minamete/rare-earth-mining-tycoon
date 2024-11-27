@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0w3ldhf4t0tf"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainUiPanel.cs" id="1_w4a7k"]
+[ext_resource type="PackedScene" uid="uid://c6f7ra731fsgd" path="res://Scenes/UI/MiningSitePanel.tscn" id="2_alejh"]
+
+[sub_resource type="Theme" id="Theme_05s4p"]
+
+[node name="MainUiPanel" type="CanvasLayer"]
+script = ExtResource("1_w4a7k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.253844, 0.253842, 0.253843, 1)
+
+[node name="Separator" type="VBoxContainer" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+theme_override_constants/separation = 20
+
+[node name="TopPanel" type="HFlowContainer" parent="Separator"]
+layout_mode = 2
+theme_override_constants/h_separation = 400
+theme_override_constants/v_separation = 50
+
+[node name="CompanyName" type="Label" parent="Separator/TopPanel"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_05s4p")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 36
+text = "'s Rare Earth Mining Company"
+
+[node name="DayLabel" type="Label" parent="Separator/TopPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Day 1"
+horizontal_alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="Separator/TopPanel"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 36
+text = "Money: "
+
+[node name="MiddlePanel" type="PanelContainer" parent="Separator"]
+layout_mode = 2
+
+[node name="NewMiningSiteButton" type="Button" parent="Separator/MiddlePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "New mining site"
+
+[node name="MainPanel" type="HBoxContainer" parent="Separator"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="MenuVBox" type="VFlowContainer" parent="Separator/MainPanel"]
+layout_mode = 2
+theme_override_constants/v_separation = 20
+alignment = 1
+
+[node name="Inventory" type="Button" parent="Separator/MainPanel/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Inventory
+"
+
+[node name="MiningSite" type="Button" parent="Separator/MainPanel/MenuVBox"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Mines"
+
+[node name="Smelting" type="Button" parent="Separator/MainPanel/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Smelting"
+
+[node name="Lab" type="Button" parent="Separator/MainPanel/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Laboratory"
+
+[node name="Market" type="Button" parent="Separator/MainPanel/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Market"
+
+[node name="Settings" type="Button" parent="Separator/MainPanel/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings
+"
+
+[node name="MiningSitePanel" parent="Separator/MainPanel" instance=ExtResource("2_alejh")]
+layout_mode = 2
+
+[connection signal="pressed" from="Separator/MiddlePanel/NewMiningSiteButton" to="." method="OnNewMiningSiteButtonPressed"]

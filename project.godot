@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Rare Earth Mining Tycoon"
+run/main_scene="res://Scenes/GameManager.tscn"
+config/features=PackedStringArray("4.3", "C#", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[dotnet]
+
+project/assembly_name="Rare Earth Mining Tycoon"
+
+[gui]
+
+theme/default_theme_scale=2.0
+
+[rendering]
+
+renderer/rendering_method="mobile"

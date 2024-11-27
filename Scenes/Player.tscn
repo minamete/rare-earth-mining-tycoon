@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt7iqd4m2fi3i"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_hkks2"]
+
+[node name="Player" type="Node" node_paths=PackedStringArray("OwnedSites")]
+script = ExtResource("1_hkks2")
+OwnedSites = []
