@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtwfcxcxxhrod"]
+
+[ext_resource type="Script" path="res://Scripts/Buildings/Smelter.cs" id="1_atghn"]
+
+[node name="Smelter" type="Node"]
+script = ExtResource("1_atghn")

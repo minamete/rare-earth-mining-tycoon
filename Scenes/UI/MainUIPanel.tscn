@@ -83,7 +83,6 @@ text = "Mines"
 [node name="Smelting" type="Button" parent="Separator/MainPanel/MenuVBox"]
 layout_mode = 2
 size_flags_vertical = 3
-disabled = true
 text = "Smelting"
 
 [node name="Lab" type="Button" parent="Separator/MainPanel/MenuVBox"]

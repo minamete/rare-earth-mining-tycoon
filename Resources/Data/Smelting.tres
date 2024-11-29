@@ -1,0 +1,50 @@
+[gd_resource type="JSON" format=3 uid="uid://0j0adlam4r1v"]
+
+[resource]
+data = [{
+"NeedsRoasting": "false",
+"Ore": "Apatite",
+"Outputs": [{
+"Chance": 100.0,
+"IdealTemp": 1500.0,
+"Mass": 55.98,
+"Name": "Phosphate"
+}]
+}, {
+"NeedsRoasting": "true",
+"Ore": "Bornite",
+"Outputs": [{
+"Chance": 85.05,
+"IdealTemp": 1100.0,
+"Mass": 63.31,
+"Name": "Copper"
+}, {
+"Chance": 14.95,
+"IdealTemp": 1500.0,
+"Mass": 11.13,
+"Name": "Iron"
+}]
+}, {
+"NeedsRoasting": "true",
+"Ore": "Chalcopyrite",
+"Outputs": [{
+"Chance": 53.23,
+"IdealTemp": 1200.0,
+"Mass": 34.61,
+"Name": "Copper"
+}, {
+"Chance": 46.77,
+"IdealTemp": 1500.0,
+"Mass": 30.43,
+"Name": "Iron"
+}]
+}, {
+"NeedsRoasting": "false",
+"Ore": "Hematite",
+"Outputs": [{
+"Chance": 100.0,
+"IdealTemp": 1500.0,
+"Mass": 69.94,
+"Name": "Iron"
+}]
+}]
