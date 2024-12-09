@@ -23,6 +23,15 @@ public partial class MiningSitePanel : Container
 		OnMineSiteUpdate(_mineSiteList[index]);
 	}
 	
+	public void OnMoneyUpdated(float money) {
+		var button = GetNode<Button>("MainLayoutMargin/MainLayout/MineDetails/MineControls/Extract");
+		if (money <= 10) {
+			button.Disabled = true;
+		} else {
+			button.Disabled = false;
+		}
+	}
+	
 	public void UpdateMineList(Godot.Collections.Array<MiningSite> msl) {
 		_mineSiteList = msl;
 		GD.Print("Updating");

@@ -63,6 +63,9 @@ public partial class GameManager : Node
 		
 		var marketPanel = GetNode<MarketPanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MarketPanel");
 		marketPanel.UpdatePlayer(_player);
+		
+		var miningPanel = GetNode<MiningSitePanel>("MainUiPanel/Separator/MainPanel/ImportantPanels/MiningSitePanel");
+		miningPanel.OnMoneyUpdated(_player.Money);
 	}
 	
 	private void CreateMiningSite(Godot.Collections.Dictionary siteData)

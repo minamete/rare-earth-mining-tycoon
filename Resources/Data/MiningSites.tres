@@ -1,6 +1,7 @@
 [gd_resource type="JSON" format=3 uid="uid://vjvqsn74gx2u"]
 
 [resource]
+resource_name = "MiningSites"
 data = {
 "MiningSites": [{
 "BaseProductionRate": 10.0,
